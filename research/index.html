@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Research | VAI Lab</title>
+<meta content="Research areas" name="description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+/* Research representative figures: wide, non-clickable, no pop-up.
+   그림을 더 크게/작게 하려면 max-width 값을 조정하세요. */
+.research-figure-slot.research-figure-wide {
+  width: min(100%, 1120px);
+  max-width: 100%;
+  margin: 20px 0 28px;
+}
+.research-figure-slot.research-figure-wide .research-figure-frame {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  border-radius: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(7, 20, 33, 0.07);
+}
+.research-figure-slot.research-figure-wide .research-figure-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+}
+.research-figure-slot.research-figure-wide figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+@media (max-width: 900px) {
+  .research-figure-slot.research-figure-wide {
+    width: 100%;
+    margin: 18px 0 24px;
+  }
+}
+
+/* Research section header without left icon */
+.area-top.area-top-no-icon {
+  display: block;
+  margin-bottom: 22px;
+}
+.area-top.area-top-no-icon .area-copy {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+.area-top.area-top-no-icon .rule {
+  margin-top: 18px;
+}
+
+/* Research auto-play demo videos */
+.research-video-slot {
+  width: min(100%, 1120px);
+  max-width: 100%;
+  margin: 14px 0 30px;
+}
+.research-video-frame {
+  width: 100%;
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  border-radius: 22px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 24px rgba(7, 20, 33, 0.07);
+}
+.research-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+  object-fit: contain;
+}
+.research-video-slot figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<header class="site-header" data-header="">
+<div class="nav-shell">
+<a aria-label="VAI Lab home" class="brand" href="../index.html">
+<img alt="VAI Lab logo" class="brand-mark" src="../assets/img/logo-mark.svg"/>
+<span class="brand-copy"><strong>Vision AI Laboratory</strong><small>Sejong University</small></span>
+</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" data-menu-toggle="" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Primary navigation" class="primary-nav" id="site-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li class="has-menu"><a href="../people/professor.html">People</a>
+<ul class="dropdown-menu">
+<li><a href="../people/professor.html">Professor</a></li>
+<li><a href="../people/members.html">Current Members</a></li>
+</ul>
+</li>
+<li class="has-menu"><a href="../publication/int-journal.html">Publication</a>
+<ul class="dropdown-menu wide">
+<li><a href="../publication/int-journal.html">Int. Journal</a></li>
+<li><a href="../publication/domestic-journal.html">Domestic Journal</a></li>
+<li><a href="../publication/int-conference.html">Int. Conference</a></li>
+<li><a href="../publication/domestic-conference.html">Domestic Conference</a></li>
+<li><a href="../publication/patents.html">Patents</a></li>
+</ul>
+</li>
+<li><a class="active" href="../research/index.html">Research</a></li>
+<li class="has-menu"><a href="../board/news.html">Board</a>
+<ul class="dropdown-menu"><li><a href="../board/news.html">News</a></li><li><a href="../board/gallery.html">Gallery</a></li><li><a href="../board/lecture.html">Lecture</a></li></ul>
+</li>
+<li><a href="../notice.html">Notice</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section class="page-hero compact">
+<div class="page-hero-bg"></div>
+<div class="container page-hero-inner">
+<div class="eyebrow">Research</div>
+<h1>Research Areas</h1>
+<p>Vision AI Laboratory focuses on computer vision, imaging AI, industrial inspection, and document intelligence.</p>
+</div>
+</section>
+<section class="content"><div class="container">
+<section class="area-section" id="computer-vision">
+<div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">VLM · Tracking · Re-ID · Scene Understanding</div><h2>Computer Vision AI</h2><p>Multi-modal vision-language models, object tracking, key-frame selection, and image/video retrieval for real-world visual intelligence.</p><div class="rule"></div></div></div>
+<!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
+<figure class="research-figure-slot research-figure-wide">
+<div class="research-figure-frame">
+<img alt="Computer Vision AI 대표그림" class="research-figure-image" loading="lazy" src="../assets/img/research/VLM_report.jpg"/>
+</div>
+<figcaption>Computer Vision AI 대표그림 — 실제 연구 그림으로 교체 가능</figcaption>
+</figure>
+<div class="topic-grid">
+<article class="topic-card"><h3>Multi-modal VLM for Video Abnormality Detection</h3><p>Video event classification and real-time anomaly detection using large vision-language models combined with temporal reasoning.</p><div class="kw-list"><span class="kw">VLM</span><span class="kw">Video AI</span><span class="kw">Anomaly</span></div></article>
+<article class="topic-card"><h3>Object Classification &amp; Tracking for Scene Understanding</h3><p>Robust multi-target tracking with scene-level semantic classification for surveillance and autonomous systems.</p><div class="kw-list"><span class="kw">MOT</span><span class="kw">Re-ID</span><span class="kw">Scene AI</span></div></article>
+<article class="topic-card"><h3>Key-Frame Selection for VLM and Video Understanding</h3><p>Efficient keyframe extraction algorithms that compress video content for optimized VLM input processing.</p><div class="kw-list"><span class="kw">Key-frame</span><span class="kw">Compression</span><span class="kw">VLM Input</span></div></article>
+<article class="topic-card"><h3>Image &amp; Video Search with Re-ID, VLM and RAG</h3><p>Large-scale image/video retrieval using person re-identification integrated with VLM and retrieval-augmented generation.</p><div class="kw-list"><span class="kw">Retrieval</span><span class="kw">RAG</span><span class="kw">Search</span></div></article></div>
+</section>
+<section class="area-section" id="imaging">
+<div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Restoration · Enhancement · Low-quality Vision</div><h2>Imaging AI</h2><p>Enhancement algorithms for low-quality, low-light, and noisy images across visible, IR, thermal, and X-ray imaging domains.</p><div class="rule"></div></div></div>
+<!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
+<figure class="research-figure-slot research-figure-wide">
+<div class="research-figure-frame">
+<img alt="Imaging AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/AWR_preproc.jpg"/>
+</div>
+<figcaption>Imaging AI 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
+</figure>
+<figure class="research-video-slot research-figure-wide">
+<div class="research-video-frame">
+<video aria-label="Imaging AI video stabilization demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
+<source src="../assets/video/video_Stabilization.mp4" type="video/mp4"/>
+      사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
+    </video>
+</div>
+<figcaption>Video Stabilization demo — <code>assets/video/video_Stabilization.mp4</code> 파일을 교체하면 자동 반영됩니다.</figcaption>
+</figure>
+<div class="topic-grid">
+<article class="topic-card"><h3>Super-Resolution for Small Objects</h3><p>Deep learning super-resolution targeting small or distant objects in low-resolution surveillance and industrial images.</p><div class="kw-list"><span class="kw">SR</span><span class="kw">Small Object</span><span class="kw">Low-res</span></div></article>
+<article class="topic-card"><h3>Video Stabilization for UAV</h3><p>Real-time video stabilization for drone footage, enabling stable visual analysis and motion compensation in aerial systems.</p><div class="kw-list"><span class="kw">UAV</span><span class="kw">Stabilization</span><span class="kw">Motion</span></div></article>
+<article class="topic-card"><h3>HDR &amp; Contrast Enhancement</h3><p>High dynamic range and adaptive contrast enhancement for low-light, IR, and thermal camera imaging systems.</p><div class="kw-list"><span class="kw">HDR</span><span class="kw">IR/Thermal</span><span class="kw">Contrast</span></div></article>
+<article class="topic-card"><h3>Dehazing for Adverse Weather</h3><p>AI-based image dehazing to restore object visibility under fog, haze, smoke, or rain conditions.</p><div class="kw-list"><span class="kw">Dehazing</span><span class="kw">Smoke</span><span class="kw">Weather</span></div></article>
+<article class="topic-card"><h3>Image Denoising for X-ray</h3><p>Low-dose X-ray denoising and high-speed 2D/3D reconstruction for minimizing radiation in industrial inspection.</p><div class="kw-list"><span class="kw">X-ray</span><span class="kw">Denoising</span><span class="kw">CT</span></div></article></div>
+</section>
+<section class="area-section" id="inspection">
+<div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Industrial AI · X-ray · CT · Manufacturing</div><h2>Defect Detection &amp; Classification</h2><p>AI-driven automated inspection systems for semiconductor, EV battery, food, and high-speed manufacturing lines.</p><div class="rule"></div></div></div>
+<!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
+<figure class="research-figure-slot research-figure-wide">
+<div class="research-figure-frame">
+<img alt="Defect Detection &amp; Classification 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/defect_AI.jpg"/>
+</div>
+<figcaption>Defect Detection &amp; Classification 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
+</figure>
+<figure class="research-video-slot research-figure-wide">
+<div class="research-video-frame">
+<video aria-label="Defect Detection X-ray super-resolution demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
+<source src="../assets/video/Xray_SR.mp4" type="video/mp4"/>
+      사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
+    </video>
+</div>
+<figcaption>X-ray Super-Resolution demo — <code>assets/video/Xray_SR.mp4</code> 파일을 교체하면 자동 반영됩니다.</figcaption>
+</figure>
+<div class="topic-grid">
+<article class="topic-card"><h3>Semiconductor &amp; EV Battery X-ray Inspection</h3><p>Automated X-ray defect inspection for semiconductor BGA packages and large-format cylindrical EV battery cells.</p><div class="kw-list"><span class="kw">BGA</span><span class="kw">EV Battery</span><span class="kw">X-ray</span></div></article>
+<article class="topic-card"><h3>Camera Vision Defect Inspection</h3><p>Visual defect detection and classification system for high-speed manufacturing lines using RGB/IR camera arrays.</p><div class="kw-list"><span class="kw">RGB/IR</span><span class="kw">Defect</span><span class="kw">High-speed</span></div></article>
+<article class="topic-card"><h3>Foreign Particle Detection</h3><p>AI detection of foreign particles in EV battery electrodes and food products using multi-modal sensing.</p><div class="kw-list"><span class="kw">Particle</span><span class="kw">Food</span><span class="kw">Electrode</span></div></article>
+<article class="topic-card"><h3>High-speed CT for Industrial Inspection</h3><p>Fast 3D X-ray CT reconstruction and automated analysis for high-speed industrial defect inspection.</p><div class="kw-list"><span class="kw">CT</span><span class="kw">3D</span><span class="kw">Inspection</span></div></article></div>
+</section>
+<section class="area-section" id="document">
+<div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">OCR · LLM · Privacy · Security Classification</div><h2>Document AI</h2><p>LLM and OCR-based intelligent document processing for automation, privacy protection, semantic extraction, and classification.</p><div class="rule"></div></div></div>
+<!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
+<figure class="research-figure-slot research-figure-wide">
+<div class="research-figure-frame">
+<img alt="Document AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/document_AI2.jpg"/>
+</div>
+<figcaption>Document AI 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
+</figure>
+<div class="topic-grid">
+<article class="topic-card"><h3>Document Automation with Layout Analysis &amp; OCR</h3><p>Intelligent document pipeline combining layout understanding and OCR for automated data extraction.</p><div class="kw-list"><span class="kw">OCR</span><span class="kw">Layout</span><span class="kw">Automation</span></div></article>
+<article class="topic-card"><h3>Context-aware PII De-Identification</h3><p>LLM and OCR based PII detection and de-identification for complex mixed-content document types.</p><div class="kw-list"><span class="kw">PII</span><span class="kw">Privacy</span><span class="kw">LLM</span></div></article>
+<article class="topic-card"><h3>Document Security Classification</h3><p>Automated multi-level security classification for complex documents with mixed text, tables, and context.</p><div class="kw-list"><span class="kw">Security</span><span class="kw">Classification</span><span class="kw">Policy</span></div></article>
+<article class="topic-card"><h3>Banner &amp; Sign Classification</h3><p>OCR and semantic understanding of banners and outdoor advertisements for content classification.</p><div class="kw-list"><span class="kw">Banner</span><span class="kw">Signage</span><span class="kw">Semantic</span></div></article></div>
+</section></div></section>
+</main>
+<footer class="site-footer">
+<div class="footer-shell">
+<div class="footer-brand">
+<img alt="" aria-hidden="true" src="../assets/img/logo-mark.svg"/>
+<div><strong>VAI Lab</strong><span>Vision AI Laboratory · Sejong University</span></div>
+</div>
+<div class="footer-meta">
+<span>세종대학교 인공지능데이터사이언스학과, 대양AI센터 501호</span>
+<span>bmin (at) sejong.ac.kr</span>
+<span>Copyright ©2026 VAI Lab. All Rights Reserved.</span>
+</div>
+</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

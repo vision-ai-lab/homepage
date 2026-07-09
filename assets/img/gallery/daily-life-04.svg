@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Daily life photo placeholder 4</title>
+  <desc id="desc">Replace this placeholder with a gallery JPG photo.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f4f2fb"/>
+      <stop offset="1" stop-color="#ddd8f0"/>
+    </linearGradient>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#ffffff" stroke-opacity="0.65" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.55"/>
+  <rect x="88" y="86" width="1024" height="728" rx="28" fill="#ffffff" fill-opacity="0.44" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="300" cy="320" r="72" fill="#7c5cff" fill-opacity="0.88"/>
+  <path d="M188 670 L420 448 L558 574 L694 430 L1012 670 Z" fill="#7c5cff" fill-opacity="0.36"/>
+  <path d="M188 670 L420 448 L558 574 L694 430 L1012 670" fill="none" stroke="#7c5cff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="760" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800" fill="#071421" fill-opacity="0.72">PHOTO 04</text>
+</svg>

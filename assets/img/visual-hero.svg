@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560">
+<defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4de5d4"/><stop offset=".55" stop-color="#2f80ed"/><stop offset="1" stop-color="#d9b96e"/></linearGradient><radialGradient id="r" cx="50%" cy="45%" r="55%"><stop stop-color="#4de5d4" stop-opacity=".26"/><stop offset="1" stop-color="#4de5d4" stop-opacity="0"/></radialGradient></defs>
+<rect width="760" height="560" rx="34" fill="url(#r)"/>
+<g opacity=".42" stroke="#fff" stroke-width="1"><path d="M38 82h684M38 158h684M38 234h684M38 310h684M38 386h684M38 462h684"/><path d="M76 44v472M178 44v472M280 44v472M382 44v472M484 44v472M586 44v472M688 44v472"/></g>
+<g fill="none" stroke="url(#a)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M122 330c78-108 148-142 236-104 86 37 127 6 187-72" opacity=".95"/>
+<path d="M126 382c64-88 152-108 238-72 103 43 166 14 252-96" opacity=".48"/>
+<path d="M126 272c67-66 139-92 218-57 78 35 121 12 172-46" opacity=".36"/>
+</g>
+<g>
+<circle cx="122" cy="330" r="12" fill="#4de5d4"/><circle cx="358" cy="226" r="15" fill="#2f80ed"/><circle cx="545" cy="154" r="12" fill="#d9b96e"/><circle cx="616" cy="214" r="9" fill="#4de5d4"/><circle cx="276" cy="309" r="9" fill="#d9b96e"/>
+</g>
+<g fill="rgba(7,20,33,.72)" stroke="rgba(255,255,255,.18)"><rect x="92" y="74" width="188" height="86" rx="18"/><rect x="452" y="354" width="218" height="94" rx="18"/><rect x="275" y="408" width="184" height="72" rx="18"/></g>
+<g font-family="Inter,Arial" font-weight="700" fill="#fff"><text x="116" y="112" font-size="18">Video Understanding</text><text x="116" y="138" font-size="12" opacity=".56">VLM · Tracking · Re-ID</text><text x="476" y="392" font-size="18">Industrial Inspection</text><text x="476" y="418" font-size="12" opacity=".56">X-ray · CT · Defect AI</text><text x="299" y="448" font-size="16">Document Intelligence</text></g>
+</svg>

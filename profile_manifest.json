@@ -1,0 +1,51 @@
+{
+  "profile": "vailab-professional-revision10-no-alumni-202607",
+  "base": "previous AISL-style draft + uploaded vailab-v2 structure",
+  "created_for": "review before GitHub Pages upload; Alumni removed from People menu and tabs",
+  "entry": "index.html",
+  "pages": [
+    "board/lecture.html",
+    "board/gallery.html",
+    "board/news.html",
+    "board/notice.html",
+    "contact.html",
+    "index.html",
+    "lecture.html",
+    "notice.html",
+    "people/members.html",
+    "people/professor.html",
+    "publication/domestic-conference.html",
+    "publication/domestic-journal.html",
+    "publication/index.html",
+    "publication/int-conference.html",
+    "publication/int-journal.html",
+    "publication/patents.html",
+    "research/index.html"
+  ],
+  "notes": [
+    "Static HTML/CSS/JS only",
+    "Relative paths",
+    "GitHub Pages friendly; upload the extracted contents of this folder to the repository root",
+    "2026.06 domestic journal/conference/news/awards updates included",
+    "Simplified homepage hero and one-line publication metadata styling included",
+    "Lecture moved under Board dropdown across all major pages",
+    "lecture.html updated with semester-grouped courses from 2025 Spring to 2026 Fall",
+    "Professor Korean name and Research Interests block removed from people/professor.html",
+    "Hero title line-height and gradient title padding adjusted to prevent descender clipping",
+    "Four international conference papers added to publication/int-conference.html",
+    "Requested US patent entries merged into publication/patents.html with author names removed",
+    "Hero subtitle All you can see, All you can AI reduced to 70 percent size while keeping Vision AI Laboratory at the current size",
+    "2026.07 lab member update and 2025.08 IEEE Access paper news added",
+    "Award image placeholders are consolidated in Board > News for 2025+ conference awards",
+    "Editable representative image placeholders added above topic grids in Research page",
+    "Moved figure slots from News to Awards/Publications; compact figure slots; anchored adjustable image popup; grouped gallery layout.",
+    "Alumni removed from visible People menu, People tabs, and package files.",
+    "Alumni removed from People menu and tabs; Alumni page files excluded from the package."
+  ],
+  "version": "revision10-no-alumni-202607",
+  "profile_name": "VAI Lab Professional Revision 10",
+  "changes": [
+    "Removed Alumni from navigation and People section tabs; deleted people/alumni.html and people-alumni.html from the package.",
+    "Removed Alumni from navigation and People section tabs; excluded Alumni page files from the package."
+  ]
+}

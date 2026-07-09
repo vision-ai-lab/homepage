@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#2f80ed"/><stop offset="1" stop-color="#d9b96e"/></linearGradient></defs>
+<rect width="420" height="280" rx="26" fill="#f7fafc"/>
+<g opacity=".5" stroke="#dfe7ef"><path d="M36 55h348M36 115h348M36 175h348M36 235h348"/><path d="M74 30v220M148 30v220M222 30v220M296 30v220M370 30v220"/></g>
+<rect x="58" y="54" width="304" height="172" rx="24" fill="#071421" opacity=".92"/>
+<path d="M92 180c44-66 88-88 133-64 48 25 78 9 118-47" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/>
+<circle cx="92" cy="180" r="13" fill="#2f80ed"/><circle cx="225" cy="116" r="16" fill="#d9b96e"/><circle cx="343" cy="69" r="13" fill="#2f80ed"/>
+<rect x="90" y="74" width="92" height="14" rx="7" fill="#fff" opacity=".86"/><rect x="90" y="98" width="134" height="8" rx="4" fill="#fff" opacity=".3"/>
+<text x="90" y="212" fill="#fff" font-family="Inter,Arial" font-size="18" font-weight="800">Imaging AI</text>
+</svg>
