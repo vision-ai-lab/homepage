@@ -8,41 +8,96 @@
 <meta content="Research areas" name="description"/>
 <link href="../assets/css/style.css" rel="stylesheet"/>
 <style>
-/* Research representative figures: wide, non-clickable, no pop-up.
-   그림을 더 크게/작게 하려면 max-width 값을 조정하세요. */
-.research-figure-slot.research-figure-wide {
-  width: min(100%, 1120px);
-  max-width: 100%;
-  margin: 20px 0 28px;
+/* Research 대표그림/동영상 폭 정렬
+   - 대표그림과 MP4 영역이 아래 topic-card grid와 동일한 폭을 사용하도록 max-width 제한을 제거했습니다.
+   - 그림이 잘리지 않도록 object-fit: contain을 유지했습니다.
+   - 그림/영상 사이 간격은 margin 값으로 조절할 수 있습니다. */
+.area-section > .research-figure-slot.research-figure-wide,
+.area-section > .research-video-slot.research-figure-wide,
+.area-section > .research-media-stack {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
 }
-.research-figure-slot.research-figure-wide .research-figure-frame {
+
+.area-section > .research-figure-slot.research-figure-wide {
+  margin: 20px 0 5px;
+}
+
+.area-section > .research-video-slot.research-figure-wide {
+  margin: 0 0 10px;
+}
+
+.area-section > .research-figure-slot.research-figure-wide .research-figure-frame,
+.area-section > .research-video-slot.research-figure-wide .research-video-frame,
+.area-section > .research-media-stack .research-figure-frame {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   border: 1px solid rgba(11, 31, 58, 0.18);
   border-radius: 22px;
   overflow: hidden;
-  background: #ffffff;
   box-shadow: 0 10px 24px rgba(7, 20, 33, 0.07);
 }
-.research-figure-slot.research-figure-wide .research-figure-image {
+
+.area-section > .research-figure-slot.research-figure-wide .research-figure-frame,
+.area-section > .research-media-stack .research-figure-frame {
+  background: #ffffff;
+}
+
+.area-section > .research-video-slot.research-figure-wide .research-video-frame {
+  background: #000000;
+}
+
+.area-section > .research-figure-slot.research-figure-wide .research-figure-image,
+.area-section > .research-media-stack .research-figure-image,
+.area-section > .research-media-stack video,
+.research-video {
   display: block;
   width: 100%;
   height: auto;
   max-height: none;
+  margin: 0;
   object-fit: contain;
   object-position: center;
+}
+
+.area-section > .research-figure-slot.research-figure-wide .research-figure-image {
   background: #ffffff;
 }
-.research-figure-slot.research-figure-wide figcaption {
+
+.research-video {
+  background: #000000;
+}
+
+/* 그림 아래 카드 grid도 같은 기준 폭을 사용하도록 명시 */
+.area-section > .topic-grid {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.research-figure-slot.research-figure-wide figcaption,
+.research-video-slot figcaption {
   margin-top: 10px;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
 }
+
 @media (max-width: 900px) {
-  .research-figure-slot.research-figure-wide {
+  .area-section > .research-figure-slot.research-figure-wide,
+  .area-section > .research-video-slot.research-figure-wide,
+  .area-section > .research-media-stack {
     width: 100%;
-    margin: 18px 0 24px;
+  }
+
+  .area-section > .research-figure-slot.research-figure-wide {
+    margin: 18px 0 5px;
+  }
+
+  .area-section > .research-video-slot.research-figure-wide {
+    margin: 0 0 18px;
   }
 }
 
@@ -59,35 +114,6 @@
 .area-top.area-top-no-icon .rule {
   margin-top: 18px;
 }
-
-/* Research auto-play demo videos */
-.research-video-slot {
-  width: min(100%, 1120px);
-  max-width: 100%;
-  margin: 14px 0 30px;
-}
-.research-video-frame {
-  width: 100%;
-  border: 1px solid rgba(11, 31, 58, 0.18);
-  border-radius: 22px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 10px 24px rgba(7, 20, 33, 0.07);
-}
-.research-video {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: #000;
-  object-fit: contain;
-}
-.research-video-slot figcaption {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
-}
-
 </style>
 </head>
 <body>
@@ -108,6 +134,7 @@
 <ul class="dropdown-menu">
 <li><a href="../people/professor.html">Professor</a></li>
 <li><a href="../people/members.html">Current Members</a></li>
+<li><a href="../people/alumni.html">Alumni</a></li>
 </ul>
 </li>
 <li class="has-menu"><a href="../publication/int-journal.html">Publication</a>
@@ -120,8 +147,13 @@
 </ul>
 </li>
 <li><a class="active" href="../research/index.html">Research</a></li>
+<li><a href="../lecture.html">Lecture</a></li>
 <li class="has-menu"><a href="../board/news.html">Board</a>
-<ul class="dropdown-menu"><li><a href="../board/news.html">News</a></li><li><a href="../board/gallery.html">Gallery</a></li><li><a href="../board/lecture.html">Lecture</a></li></ul>
+<ul class="dropdown-menu">
+<li><a href="../board/news.html">News</a></li>
+<li><a href="../board/awards.html">Awards</a></li>
+<li><a href="../board/gallery.html">Gallery</a></li>
+</ul>
 </li>
 <li><a href="../notice.html">Notice</a></li>
 <li><a href="../contact.html">Contact</a></li>
@@ -143,10 +175,9 @@
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">VLM · Tracking · Re-ID · Scene Understanding</div><h2>Computer Vision AI</h2><p>Multi-modal vision-language models, object tracking, key-frame selection, and image/video retrieval for real-world visual intelligence.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-<div class="research-figure-frame">
-<img alt="Computer Vision AI 대표그림" class="research-figure-image" loading="lazy" src="../assets/img/research/VLM_report.jpg"/>
-</div>
-<figcaption>Computer Vision AI 대표그림 — 실제 연구 그림으로 교체 가능</figcaption>
+  <div class="research-figure-frame">
+    <img alt="Computer Vision AI 대표그림" class="research-figure-image" loading="lazy" src="../assets/img/research/VLM_report.jpg"/>
+  </div>
 </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Multi-modal VLM for Video Abnormality Detection</h3><p>Video event classification and real-time anomaly detection using large vision-language models combined with temporal reasoning.</p><div class="kw-list"><span class="kw">VLM</span><span class="kw">Video AI</span><span class="kw">Anomaly</span></div></article>
@@ -158,65 +189,74 @@
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Restoration · Enhancement · Low-quality Vision</div><h2>Imaging AI</h2><p>Enhancement algorithms for low-quality, low-light, and noisy images across visible, IR, thermal, and X-ray imaging domains.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-<div class="research-figure-frame">
-<img alt="Imaging AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/AWR_preproc.jpg"/>
-</div>
-<figcaption>Imaging AI 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
+  <div class="research-figure-frame">
+    <img alt="Imaging AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/AWR_preproc.jpg"/>
+  </div>
 </figure>
 <figure class="research-video-slot research-figure-wide">
-<div class="research-video-frame">
-<video aria-label="Imaging AI video stabilization demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
-<source src="../assets/video/video_Stabilization.mp4" type="video/mp4"/>
+  <div class="research-video-frame">
+    <video
+      aria-label="Imaging AI video stabilization demo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      class="research-video">
+      <source src="../assets/video/video_Stabilization.mp4" type="video/mp4"/>
       사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
     </video>
-</div>
-<figcaption>Video Stabilization demo — <code>assets/video/video_Stabilization.mp4</code> 파일을 교체하면 자동 반영됩니다.</figcaption>
-</figure>
+  </div>
+  </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Super-Resolution for Small Objects</h3><p>Deep learning super-resolution targeting small or distant objects in low-resolution surveillance and industrial images.</p><div class="kw-list"><span class="kw">SR</span><span class="kw">Small Object</span><span class="kw">Low-res</span></div></article>
 <article class="topic-card"><h3>Video Stabilization for UAV</h3><p>Real-time video stabilization for drone footage, enabling stable visual analysis and motion compensation in aerial systems.</p><div class="kw-list"><span class="kw">UAV</span><span class="kw">Stabilization</span><span class="kw">Motion</span></div></article>
 <article class="topic-card"><h3>HDR &amp; Contrast Enhancement</h3><p>High dynamic range and adaptive contrast enhancement for low-light, IR, and thermal camera imaging systems.</p><div class="kw-list"><span class="kw">HDR</span><span class="kw">IR/Thermal</span><span class="kw">Contrast</span></div></article>
-<article class="topic-card"><h3>Dehazing for Adverse Weather</h3><p>AI-based image dehazing to restore object visibility under fog, haze, smoke, or rain conditions.</p><div class="kw-list"><span class="kw">Dehazing</span><span class="kw">Smoke</span><span class="kw">Weather</span></div></article>
-<article class="topic-card"><h3>Image Denoising for X-ray</h3><p>Low-dose X-ray denoising and high-speed 2D/3D reconstruction for minimizing radiation in industrial inspection.</p><div class="kw-list"><span class="kw">X-ray</span><span class="kw">Denoising</span><span class="kw">CT</span></div></article></div>
+<article class="topic-card"><h3>Dehazing for Adverse Weather</h3><p>AI-based image dehazing to restore object visibility under fog, haze, smoke, or rain conditions.</p><div class="kw-list"><span class="kw">Dehazing</span><span class="kw">Smoke</span><span class="kw">Weather</span></div></article></div>
 </section>
 <section class="area-section" id="inspection">
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Industrial AI · X-ray · CT · Manufacturing</div><h2>Defect Detection &amp; Classification</h2><p>AI-driven automated inspection systems for semiconductor, EV battery, food, and high-speed manufacturing lines.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-<div class="research-figure-frame">
-<img alt="Defect Detection &amp; Classification 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/defect_AI.jpg"/>
-</div>
-<figcaption>Defect Detection &amp; Classification 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
-</figure>
+  <div class="research-figure-frame">
+    <img alt="Defect Detection &amp; Classification 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/defect_AI.jpg"/>
+  </div>
+  </figure>
 <figure class="research-video-slot research-figure-wide">
-<div class="research-video-frame">
-<video aria-label="Defect Detection X-ray super-resolution demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
-<source src="../assets/video/Xray_SR.mp4" type="video/mp4"/>
+  <div class="research-video-frame">
+    <video
+      aria-label="Defect Detection X-ray super-resolution demo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      class="research-video">
+      <source src="../assets/video/Xray_SR.mp4" type="video/mp4"/>
       사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
     </video>
-</div>
-<figcaption>X-ray Super-Resolution demo — <code>assets/video/Xray_SR.mp4</code> 파일을 교체하면 자동 반영됩니다.</figcaption>
+  </div>
+  <figcaption>Low-dose X-ray Super-Resolution</figcaption>
 </figure>
 <div class="topic-grid">
-<article class="topic-card"><h3>Semiconductor &amp; EV Battery X-ray Inspection</h3><p>Automated X-ray defect inspection for semiconductor BGA packages and large-format cylindrical EV battery cells.</p><div class="kw-list"><span class="kw">BGA</span><span class="kw">EV Battery</span><span class="kw">X-ray</span></div></article>
-<article class="topic-card"><h3>Camera Vision Defect Inspection</h3><p>Visual defect detection and classification system for high-speed manufacturing lines using RGB/IR camera arrays.</p><div class="kw-list"><span class="kw">RGB/IR</span><span class="kw">Defect</span><span class="kw">High-speed</span></div></article>
-<article class="topic-card"><h3>Foreign Particle Detection</h3><p>AI detection of foreign particles in EV battery electrodes and food products using multi-modal sensing.</p><div class="kw-list"><span class="kw">Particle</span><span class="kw">Food</span><span class="kw">Electrode</span></div></article>
-<article class="topic-card"><h3>High-speed CT for Industrial Inspection</h3><p>Fast 3D X-ray CT reconstruction and automated analysis for high-speed industrial defect inspection.</p><div class="kw-list"><span class="kw">CT</span><span class="kw">3D</span><span class="kw">Inspection</span></div></article></div>
+<article class="topic-card"><h3>Semiconductor &amp; EV Battery X-ray Inspection</h3><p>Automated X-ray defect inspection for semiconductor BGA packages and large-format cylindrical EV battery cells.</p><div class="kw-list"><span class="kw">BGA</span><span class="kw">Semiconductor Package</span><span class="kw">EV Battery</span><span class="kw">X-ray</span></div></article>
+<article class="topic-card"><h3>Image Denoising for X-ray</h3><p>Low-dose X-ray denoising and high-speed 2D/3D reconstruction for minimizing radiation in industrial inspection.</p><div class="kw-list"><span class="kw">X-ray</span><span class="kw">Denoising</span><span class="kw">Super-Resolution</span><span class="kw">High Dynimic Randing</span></div></article>
+<article class="topic-card"><h3>Foreign Particle Detection</h3><p>AI detection of foreign particles in EV battery electrodes and food products using multi-modal sensing.</p><div class="kw-list"><span class="kw">EV Battery Particle</span><span class="kw">Fish bone</span><span class="kw">Food foreign particle</span></div></article>
+<article class="topic-card"><h3>High-speed CT for Industrial Inspection</h3><p>Fast 3D X-ray CT reconstruction and automated analysis for high-speed industrial defect inspection.</p><div class="kw-list"><span class="kw">CT Reconstruction</span><span class="kw">2D-3D Inspection</span><span class="kw">CT Super-resolution</span></div></article></div>
 </section>
 <section class="area-section" id="document">
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">OCR · LLM · Privacy · Security Classification</div><h2>Document AI</h2><p>LLM and OCR-based intelligent document processing for automation, privacy protection, semantic extraction, and classification.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-<div class="research-figure-frame">
-<img alt="Document AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/document_AI2.jpg"/>
-</div>
-<figcaption>Document AI 대표그림 자리 — 실제 연구 그림으로 교체 가능</figcaption>
+  <div class="research-figure-frame">
+    <img alt="Document AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/document_AI2.jpg"/>
+  </div>
 </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Document Automation with Layout Analysis &amp; OCR</h3><p>Intelligent document pipeline combining layout understanding and OCR for automated data extraction.</p><div class="kw-list"><span class="kw">OCR</span><span class="kw">Layout</span><span class="kw">Automation</span></div></article>
 <article class="topic-card"><h3>Context-aware PII De-Identification</h3><p>LLM and OCR based PII detection and de-identification for complex mixed-content document types.</p><div class="kw-list"><span class="kw">PII</span><span class="kw">Privacy</span><span class="kw">LLM</span></div></article>
-<article class="topic-card"><h3>Document Security Classification</h3><p>Automated multi-level security classification for complex documents with mixed text, tables, and context.</p><div class="kw-list"><span class="kw">Security</span><span class="kw">Classification</span><span class="kw">Policy</span></div></article>
-<article class="topic-card"><h3>Banner &amp; Sign Classification</h3><p>OCR and semantic understanding of banners and outdoor advertisements for content classification.</p><div class="kw-list"><span class="kw">Banner</span><span class="kw">Signage</span><span class="kw">Semantic</span></div></article></div>
+<article class="topic-card"><h3>Document Security Classification</h3><p>Automated multi-level security classification for complex documents with mixed text, tables, and context.</p><div class="kw-list"><span class="kw">Security Classification</span><span class="kw">Policy Modeling</span></div></article>
+<article class="topic-card"><h3>Banner Content Classification</h3><p>OCR and semantic understanding of banners and outdoor advertisements for content classification; Public/Political/Commercial.</p><div class="kw-list"><span class="kw">Banner</span><span class="kw">Signage</span><span class="kw">Semantic</span></div></article></div>
 </section></div></section>
 </main>
 <footer class="site-footer">
