@@ -134,7 +134,6 @@
 <ul class="dropdown-menu">
 <li><a href="../people/professor.html">Professor</a></li>
 <li><a href="../people/members.html">Current Members</a></li>
-<li><a href="../people/alumni.html">Alumni</a></li>
 </ul>
 </li>
 <li class="has-menu"><a href="../publication/int-journal.html">Publication</a>
@@ -146,16 +145,19 @@
 <li><a href="../publication/patents.html">Patents</a></li>
 </ul>
 </li>
-<li><a class="active" href="../research/index.html">Research</a></li>
-<li><a href="../lecture.html">Lecture</a></li>
+<li class="has-menu"><a class="active" href="../research/index.html">Research</a>
+<ul class="dropdown-menu">
+<li><a href="../research/index.html">Research Areas</a></li>
+<li><a href="../research/projects.html">Projects</a></li>
+</ul>
+</li>
 <li class="has-menu"><a href="../board/news.html">Board</a>
 <ul class="dropdown-menu">
 <li><a href="../board/news.html">News</a></li>
-<li><a href="../board/awards.html">Awards</a></li>
 <li><a href="../board/gallery.html">Gallery</a></li>
+<li><a href="../board/lecture.html">Lecture</a></li>
 </ul>
 </li>
-<li><a href="../notice.html">Notice</a></li>
 <li><a href="../contact.html">Contact</a></li>
 </ul>
 </nav>
@@ -169,15 +171,18 @@
 <h1>Research Areas</h1>
 <p>Vision AI Laboratory focuses on computer vision, imaging AI, industrial inspection, and document intelligence.</p>
 </div>
-</section>
+</section><nav aria-label="Research section tabs" class="page-tabs"><div class="container"><ul>
+<li><a class="active" href="../research/index.html">Research Areas</a></li>
+<li><a class="" href="../research/projects.html">Projects</a></li>
+</ul></div></nav>
 <section class="content"><div class="container">
 <section class="area-section" id="computer-vision">
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">VLM · Tracking · Re-ID · Scene Understanding</div><h2>Computer Vision AI</h2><p>Multi-modal vision-language models, object tracking, key-frame selection, and image/video retrieval for real-world visual intelligence.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-  <div class="research-figure-frame">
-    <img alt="Computer Vision AI 대표그림" class="research-figure-image" loading="lazy" src="../assets/img/research/VLM_report.jpg"/>
-  </div>
+<div class="research-figure-frame">
+<img alt="Computer Vision AI 대표그림" class="research-figure-image" loading="lazy" src="../assets/img/research/VLM_report.jpg"/>
+</div>
 </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Multi-modal VLM for Video Abnormality Detection</h3><p>Video event classification and real-time anomaly detection using large vision-language models combined with temporal reasoning.</p><div class="kw-list"><span class="kw">VLM</span><span class="kw">Video AI</span><span class="kw">Anomaly</span></div></article>
@@ -189,25 +194,18 @@
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Restoration · Enhancement · Low-quality Vision</div><h2>Imaging AI</h2><p>Enhancement algorithms for low-quality, low-light, and noisy images across visible, IR, thermal, and X-ray imaging domains.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-  <div class="research-figure-frame">
-    <img alt="Imaging AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/AWR_preproc.jpg"/>
-  </div>
+<div class="research-figure-frame">
+<img alt="Imaging AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/AWR_preproc.jpg"/>
+</div>
 </figure>
 <figure class="research-video-slot research-figure-wide">
-  <div class="research-video-frame">
-    <video
-      aria-label="Imaging AI video stabilization demo"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      class="research-video">
-      <source src="../assets/video/video_Stabilization.mp4" type="video/mp4"/>
+<div class="research-video-frame">
+<video aria-label="Imaging AI video stabilization demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
+<source src="../assets/video/video_Stabilization.mp4" type="video/mp4"/>
       사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
     </video>
-  </div>
-  </figure>
+</div>
+</figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Super-Resolution for Small Objects</h3><p>Deep learning super-resolution targeting small or distant objects in low-resolution surveillance and industrial images.</p><div class="kw-list"><span class="kw">SR</span><span class="kw">Small Object</span><span class="kw">Low-res</span></div></article>
 <article class="topic-card"><h3>Video Stabilization for UAV</h3><p>Real-time video stabilization for drone footage, enabling stable visual analysis and motion compensation in aerial systems.</p><div class="kw-list"><span class="kw">UAV</span><span class="kw">Stabilization</span><span class="kw">Motion</span></div></article>
@@ -218,25 +216,17 @@
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">Industrial AI · X-ray · CT · Manufacturing</div><h2>Defect Detection &amp; Classification</h2><p>AI-driven automated inspection systems for semiconductor, EV battery, food, and high-speed manufacturing lines.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-  <div class="research-figure-frame">
-    <img alt="Defect Detection &amp; Classification 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/defect_AI.jpg"/>
-  </div>
-  </figure>
+<div class="research-figure-frame">
+<img alt="Defect Detection &amp; Classification 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/defect_AI.jpg"/>
+</div>
+</figure>
 <figure class="research-video-slot research-figure-wide">
-  <div class="research-video-frame">
-    <video
-      aria-label="Defect Detection X-ray super-resolution demo"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      class="research-video">
-      <source src="../assets/video/Xray_SR.mp4" type="video/mp4"/>
+<div class="research-video-frame">
+<video aria-label="Defect Detection X-ray super-resolution demo" autoplay="" class="research-video" loop="" muted="" playsinline="" preload="metadata">
+<source src="../assets/video/Xray_SR.mp4" type="video/mp4"/>
       사용 중인 브라우저는 MP4 동영상 재생을 지원하지 않습니다.
     </video>
-  </div>
-  <figcaption>Low-dose X-ray Super-Resolution</figcaption>
+</div>
 </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Semiconductor &amp; EV Battery X-ray Inspection</h3><p>Automated X-ray defect inspection for semiconductor BGA packages and large-format cylindrical EV battery cells.</p><div class="kw-list"><span class="kw">BGA</span><span class="kw">Semiconductor Package</span><span class="kw">EV Battery</span><span class="kw">X-ray</span></div></article>
@@ -248,9 +238,9 @@
 <div class="area-top area-top-no-icon"><div class="area-copy"><div class="section-kicker">OCR · LLM · Privacy · Security Classification</div><h2>Document AI</h2><p>LLM and OCR-based intelligent document processing for automation, privacy protection, semantic extraction, and classification.</p><div class="rule"></div></div></div>
 <!-- 대표그림 교체 영역: src를 실제 이미지 경로로 바꾸거나 figure 전체를 삭제하세요. -->
 <figure class="research-figure-slot research-figure-wide">
-  <div class="research-figure-frame">
-    <img alt="Document AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/document_AI2.jpg"/>
-  </div>
+<div class="research-figure-frame">
+<img alt="Document AI 대표그림 자리" class="research-figure-image" loading="lazy" src="../assets/img/research/document_AI2.jpg"/>
+</div>
 </figure>
 <div class="topic-grid">
 <article class="topic-card"><h3>Document Automation with Layout Analysis &amp; OCR</h3><p>Intelligent document pipeline combining layout understanding and OCR for automated data extraction.</p><div class="kw-list"><span class="kw">OCR</span><span class="kw">Layout</span><span class="kw">Automation</span></div></article>

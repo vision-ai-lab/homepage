@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Projects | VAI Lab</title>
+<meta content="Research projects" name="description"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+/* Projects page: vertical portfolio layout.
+   구성: PROJECT 번호/제목 → 좌우로 긴 대표그림 → Introduce/Objective 내용.
+   대표그림은 Research Areas의 대표그림처럼 가로형으로 크게 보이도록 구성했습니다.
+   실제 이미지는 assets/img/project/ 폴더에 넣고 img src만 교체하세요.
+   권장 이미지 비율: 16:9, 21:9, 또는 가로형 슬라이드 캡처. */
+.projects-page { background: #fff; }
+
+.project-stack-wide {
+  display: grid;
+  gap: 42px;
+}
+
+.project-wide-card {
+  padding: 38px 0 42px;
+  border-bottom: 1px solid rgba(11, 31, 58, 0.12);
+}
+
+.project-wide-card:first-child {
+  border-top: 1px solid rgba(11, 31, 58, 0.12);
+}
+
+.project-wide-head {
+  margin-bottom: 22px;
+}
+
+.project-number-wide {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .07em;
+  color: #1f6fea;
+  text-transform: uppercase;
+}
+
+.project-title-wide {
+   margin: 0;
+  max-width: 1080px;
+  color: #051120;
+  font-size: clamp(21px, 2.05vw, 30px);
+  line-height: 1.28;
+  letter-spacing: -.03em;;
+}
+
+.project-figure-wide {
+  margin: 0 0 26px;
+  width: 100%;
+}
+
+.project-figure-wide .project-figure-frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 260px;
+  max-height: 520px;
+  aspect-ratio: 16 / 6.2;
+  border: 1px solid rgba(11, 31, 58, 0.16);
+  border-radius: 22px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.09);
+}
+
+.project-figure-wide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+}
+
+.project-figure-wide.placeholder .project-figure-frame {
+  background: radial-gradient(circle at 50% 46%, rgba(77,229,212,.18), transparent 42%), linear-gradient(135deg, #071421, #12384d);
+}
+
+.project-content-wide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.project-text-block {
+  padding: 24px 26px;
+  border: 1px solid rgba(11, 31, 58, 0.10);
+  border-radius: 20px;
+  background: #f8fafc;
+}
+
+.project-text-block h3 {
+  margin: 0 0 12px;
+  color: #071421;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.project-bullets-wide {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  color: #122033;
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.project-bullets-wide li::marker {
+  color: #1f6fea;
+  font-size: .82em;
+}
+
+.project-note-wide {
+  margin-top: 34px;
+  padding: 18px 20px;
+  border: 1px solid rgba(31, 111, 234, .18);
+  border-radius: 16px;
+  background: rgba(31, 111, 234, .055);
+  color: #5f7086;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 960px) {
+  .project-wide-card { padding: 32px 0 36px; }
+  .project-figure-wide .project-figure-frame {
+    aspect-ratio: 16 / 8.5;
+    min-height: 220px;
+  }
+  .project-content-wide { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 640px) {
+  .project-title-wide { font-size: 24px; }
+  .project-figure-wide .project-figure-frame {
+    aspect-ratio: 4 / 3;
+    min-height: 180px;
+    border-radius: 16px;
+  }
+  .project-text-block { padding: 20px; }
+  .project-bullets-wide { font-size: 14.5px; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문 바로가기</a>
+<header class="site-header" data-header="">
+<div class="nav-shell">
+<a aria-label="VAI Lab home" class="brand" href="../index.html">
+<img alt="VAI Lab logo" class="brand-mark" src="../assets/img/logo-mark.svg"/>
+<span class="brand-copy"><strong>Vision AI Laboratory</strong><small>Sejong University</small></span>
+</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" data-menu-toggle="" type="button"><span></span><span></span><span></span></button>
+<nav aria-label="Primary navigation" class="primary-nav" id="site-menu">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li class="has-menu"><a href="../people/professor.html">People</a>
+<ul class="dropdown-menu">
+<li><a href="../people/professor.html">Professor</a></li>
+<li><a href="../people/members.html">Current Members</a></li>
+</ul>
+</li>
+<li class="has-menu"><a href="../publication/int-journal.html">Publication</a>
+<ul class="dropdown-menu wide">
+<li><a href="../publication/int-journal.html">Int. Journal</a></li>
+<li><a href="../publication/domestic-journal.html">Domestic Journal</a></li>
+<li><a href="../publication/int-conference.html">Int. Conference</a></li>
+<li><a href="../publication/domestic-conference.html">Domestic Conference</a></li>
+<li><a href="../publication/patents.html">Patents</a></li>
+</ul>
+</li>
+<li class="has-menu"><a class="active" href="../research/index.html">Research</a>
+<ul class="dropdown-menu">
+<li><a href="../research/index.html">Research Areas</a></li>
+<li><a href="../research/projects.html">Projects</a></li>
+</ul>
+</li>
+<li class="has-menu"><a href="../board/news.html">Board</a>
+<ul class="dropdown-menu">
+<li><a href="../board/news.html">News</a></li>
+<li><a href="../board/gallery.html">Gallery</a></li>
+<li><a href="../board/lecture.html">Lecture</a></li>
+</ul>
+</li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section class="page-hero compact">
+<div class="page-hero-bg"></div>
+<div class="container page-hero-inner">
+<div class="eyebrow">Research</div>
+<h1>Projects</h1>
+<p>Vision AI Laboratory conducts government-funded and industry-collaborative projects for deployable AI technologies.</p>
+</div>
+</section>
+<nav aria-label="Research section tabs" class="page-tabs"><div class="container"><ul>
+<li><a class="" href="../research/index.html">Research Areas</a></li>
+<li><a class="active" href="../research/projects.html">Projects</a></li>
+</ul></div></nav>
+<section class="content projects-page">
+<div class="container">
+<div class="project-stack-wide">
+
+<article class="project-wide-card">
+  <header class="project-wide-head">
+    <p class="project-number-wide">PROJECT 01</p>
+    <h1 class="project-title-wide">위변조 공격에 강인한 물리적 복제 불가능 PUF·블록체인 융합보안 기술개발</h1>
+  </header>
+  <figure class="project-figure-wide">
+    <div class="project-figure-frame">
+      <img alt="차량 내 운전자 복합감정인지 온디바이스 AI 프로젝트 대표 이미지" loading="lazy" src="../assets/img/project/puf_all.jpg"/>
+    </div>
+  </figure>
+  <div class="project-content-wide">
+    <section class="project-text-block">
+      <h3>Introduce</h3>
+      <ul class="project-bullets-wide">
+        <li>반도체,배터리 위변조 방지 및 위조 의약품 차단을 위한 보안 기술</li>
+        <li>물리적 복제가 불가능한 비가시성 레이저 패턴을 임베딩 후 카메라로 검출/검증하는 시스템 개발</li>
+      </ul>
+    </section>
+    <section class="project-text-block">
+      <h3>Objective</h3>
+      <ul class="project-bullets-wide">
+        <li>비가시성 레이저 패턴의 카메라 비전 인식 기술 개발</li>
+        <li>패턴 검출 성능향상을 위한 후처리 기반 카메라 ISP 기술 개발</li>
+      </ul>
+    </section>
+  </div>
+</article>
+
+</div>
+
+<div class="project-note-wide">
+
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-shell">
+<div class="footer-brand"><img alt="" aria-hidden="true" src="../assets/img/logo-mark.svg"/><div><strong>VAI Lab</strong><span>Vision AI Laboratory · Sejong University</span></div></div>
+<div class="footer-meta"><span>세종대학교 인공지능데이터사이언스학과, 대양AI센터 501호</span><span>bmin (at) sejong.ac.kr</span><span>Copyright ©2026 VAI Lab. All Rights Reserved.</span></div>
+</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

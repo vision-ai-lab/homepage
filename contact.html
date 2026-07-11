@@ -7,7 +7,118 @@
 <title>Contact | VAI Lab</title>
 <meta content="Contact page" name="description"/>
 <link href="assets/css/style.css" rel="stylesheet"/>
-</head>
+<style>
+/* Contact page local overrides: Notice + Lab Information full-width layout */
+.contact-layout.contact-layout-full {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 24px;
+}
+.contact-layout.contact-layout-full > .contact-card {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
+}
+.contact-layout.contact-layout-full .contact-info-card,
+.contact-layout.contact-layout-full .contact-notice-card {
+  width: 100%;
+}
+.contact-notice-card .notice-table {
+  margin-bottom: 0;
+}
+/* [IMAGE-EDIT] AI 기업형 연구실 업무 방식 인포그래픽
+   이미지 교체 방법: assets/img/ai-lab-working-style.png 파일을 같은 이름으로 교체하거나,
+   아래 contact.html의 img src 경로를 새 이미지 파일명으로 수정하세요. */
+.working-style-figure {
+  margin: 24px 0 0;
+  width: 100%;
+  border: 1px solid var(--line, #d8e2ee);
+  border-radius: 24px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.07);
+}
+.working-style-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+}
+@media (max-width: 760px) {
+  .contact-layout.contact-layout-full {
+    gap: 20px;
+  }
+  .working-style-figure {
+    margin-top: 18px;
+    border-radius: 18px;
+  }
+}
+
+/* Notice detail text: 각 Notice 제목 바로 아래에 작은 설명을 표시 */
+.contact-notice-table td {
+  vertical-align: top;
+}
+.contact-notice-table .notice-title-main {
+  display: block;
+  color: var(--ink, #071421);
+  font-weight: 800;
+  line-height: 1.45;
+}
+.contact-notice-table .notice-detail {
+  margin-top: 8px;
+  color: var(--muted, #64748b);
+  font-size: 13.5px;
+  line-height: 1.78;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.contact-notice-table .notice-detail p {
+  margin: 0;
+}
+.contact-notice-table .notice-detail ul {
+  margin: 8px 0 0 0;
+  padding-left: 18px;
+}
+.contact-notice-table .notice-detail li {
+  margin: 7px 0;
+}
+.contact-notice-table .notice-detail strong {
+  color: #0f3d8c;
+  font-weight: 800;
+}
+
+/* [LINK-EDIT] Slack / Confluence / Jira 활용 영상 링크
+   href 값만 바꾸면 각 단어가 연결되는 YouTube 링크를 변경할 수 있습니다. */
+.contact-notice-table .tool-video-link {
+  color: #0f3d8c;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: rgba(15, 61, 140, 0.38);
+}
+.contact-notice-table .tool-video-link:hover,
+.contact-notice-table .tool-video-link:focus {
+  color: #0b63ce;
+  text-decoration-color: currentColor;
+}
+.contact-notice-table .working-style-figure {
+  margin-top: 18px;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+@media (max-width: 760px) {
+  .contact-notice-table .notice-detail {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+</style></head>
 <body>
 <a class="skip-link" href="#main-content">본문 바로가기</a>
 <header class="site-header" data-header="">
@@ -37,11 +148,19 @@
 <li><a href="publication/patents.html">Patents</a></li>
 </ul>
 </li>
-<li><a href="research/index.html">Research</a></li>
-<li class="has-menu"><a href="board/news.html">Board</a>
-<ul class="dropdown-menu"><li><a href="board/news.html">News</a></li><li><a href="board/gallery.html">Gallery</a></li><li><a href="board/lecture.html">Lecture</a></li></ul>
+<li class="has-menu"><a href="research/index.html">Research</a>
+<ul class="dropdown-menu">
+<li><a href="research/index.html">Research Areas</a></li>
+<li><a href="research/projects.html">Projects</a></li>
+</ul>
 </li>
-<li><a href="notice.html">Notice</a></li>
+<li class="has-menu"><a href="board/news.html">Board</a>
+<ul class="dropdown-menu">
+<li><a href="board/news.html">News</a></li>
+<li><a href="board/gallery.html">Gallery</a></li>
+<li><a href="board/lecture.html">Lecture</a></li>
+</ul>
+</li>
 <li><a class="active" href="contact.html">Contact</a></li>
 </ul>
 </nav>
@@ -56,21 +175,56 @@
 <p>Research collaboration, prospective student inquiries, and lab contact information</p>
 </div>
 </section>
-<section class="content"><div class="container contact-layout">
-<div class="contact-card">
+<section class="content"><div class="container contact-layout contact-layout-full">
+<div class="contact-card contact-notice-card">
+<div class="section-kicker">Notice</div><h2>Notice</h2>
+<table class="notice-table contact-notice-table">
+<thead><tr><th>Date</th><th>Title</th></tr></thead>
+<tbody>
+<tr>
+<td>2026.07.01</td>
+<td class="title">
+<span class="notice-title-main">[모집] 학부 연구생 모집 — Computer Vision / AI 관련 프로젝트</span>
+<div class="notice-detail"><p>Computer Vision / AI 관련 프로젝트에 관심 있는 학부 연구생을 모집합니다.</p></div>
+</td>
+</tr>
+<tr>
+<td>상시</td>
+<td class="title">
+<span class="notice-title-main">[모집] 대학원 석/박사 과정 모집 — Computer Vision / AI 관련 프로젝트</span>
+<div class="notice-detail"><p>석/박사 과정 진학 희망자는 관심 연구 분야와 연구 경험을 포함하여 이메일로 문의해 주세요.</p></div>
+</td>
+</tr>
+<tr>
+<td>상시</td>
+<td class="title">
+<span class="notice-title-main">연구실 업무 방식 (AI 기업형 연구실 업무 방식)</span>
+<div class="notice-detail">
+<ul>
+<li>교수님과 학생 간 모든 개인 대화(DM) 및 업무 대화, 연구실 공지는 <a class="tool-video-link" href="https://www.youtube.com/watch?v=egbpZ8yCwuw" target="_blank" rel="noopener noreferrer" title="Slack 한국어 활용 영상 보기"><strong>Slack</strong></a>을 통해 이루어집니다. 카카오톡이나 일반 SNS 메신저는 개인의 공간으로만 사용되고, 연구실 업무 및 생활에는 전혀 사용되지 않습니다.</li>
+<li>교수님과 학생 간 모든 연구 미팅은 PPT나 워드문서가 아닌 <a class="tool-video-link" href="https://www.youtube.com/watch?v=HYzgXc8_w04" target="_blank" rel="noopener noreferrer" title="Confluence 한국어 활용 영상 보기"><strong>Confluence</strong></a> 공유 문서 시스템을 사용하여 이루어집니다. 연구실에 들어오면 연구원들이 작성한 <strong>Confluence</strong></a>의 과거/현재의 모든 연구 문서들을 함께 볼 수 있고, 이러한 문서 공유 방식을 통해 더 빠르고 효율적인 연구가 진행됩니다.</li>
+<li>개인연구, 프로젝트 수행, 논문 작성 등 모든 Task는 <a class="tool-video-link" href="https://www.youtube.com/watch?v=Aq3J-rqu-OU" target="_blank" rel="noopener noreferrer" title="Jira 한국어 활용 영상 보기"><strong>Jira</strong></a> 업무일정관리 협업 시스템을 사용하여 관리합니다. 완료한 Task, 이번 주 수행할 Task, 프로젝트 수행 시 연구원별 Task와 일정을 협업 SW로 추적하여 효율적인 비대면 연구개발이 가능하도록 운영합니다.</li>
+</ul>
+</div>
+<figure class="working-style-figure"><img alt="AI 기업형 연구실 업무 방식: Slack, Confluence, Jira 기반 연구실 업무 흐름" loading="lazy" src="assets/img/project/AI_work.jpg"/></figure>
+</td>
+</tr>
+</tbody>
+</table></div>
+<div class="contact-card contact-info-card">
 <h2>Lab Information</h2>
 <div class="contact-list">
 <div class="contact-item"><span>Lab</span><span>Vision AI Laboratory (VAI Lab)</span></div>
 <div class="contact-item"><span>Dept.</span><span>Department of Artificial Intelligence &amp; Data Science, Sejong University</span></div>
-<div class="contact-item"><span>Office</span><span>Room 501, Daeyang AI Center</span></div>
+<div class="contact-item"><span>Student Office</span><span>Room 319, Daeyang AI Center</span></div>
+<div class="contact-item"><span>Professor Office</span><span>Room 501, Daeyang AI Center</span></div>
 <div class="contact-item"><span>Address</span><span>501, Daeyang AI Center, Department of Artificial Intelligence and Data Science, Sejong University<br/>세종대학교 인공지능데이터사이언스학과, 대양AI센터 501호</span></div>
 <div class="contact-item"><span>Email</span><span><a href="mailto:bmin@sejong.ac.kr">bmin (at) sejong.ac.kr</a></span></div>
 <div class="contact-item"><span>Tel</span><span>+82-2-3408-3348</span></div>
 </div>
 <div class="hero-actions" style="margin-top:24px"><a class="btn btn-dark" href="mailto:bmin@sejong.ac.kr">Send Email</a><a class="btn" href="research/index.html" style="border-color:var(--line);background:#fff;color:var(--ink)">Research Areas</a></div>
 </div>
-
-</main>
+</div></section></main>
 <footer class="site-footer">
 <div class="footer-shell">
 <div class="footer-brand">
