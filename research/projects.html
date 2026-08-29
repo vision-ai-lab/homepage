@@ -131,10 +131,19 @@
 @media (max-width: 960px) {
   .project-wide-card { padding: 32px 0 36px; }
   .project-figure-wide .project-figure-frame {
-    aspect-ratio: 16 / 8.5;
+    aspect-ratio: 16 / 8.5; 
     min-height: 220px;
   }
   .project-content-wide { grid-template-columns: 1fr; gap: 16px; }
+}
+
+@media (max-width: 960px) {
+  .project-wide-card { padding: 32px 0 36px; }
+  .project-figure-wide .project-figure-frame {
+    aspect-ratio: 16 / 12; 
+    min-height: 220px;
+  }
+  .project-content-wide2 { grid-template-columns: 1fr; gap: 16px; }
 }
 
 @media (max-width: 640px) {
@@ -214,11 +223,44 @@
 <article class="project-wide-card">
   <header class="project-wide-head">
     <p class="project-number-wide">PROJECT 01</p>
+    <h1 class="project-title-wide">통합 정보 지휘결심을 위한 군영상 기반 상황분석 및 고속 상황 검색 기술 개발</h1>
+  </header>
+  <figure class="project-figure-wide2">
+    <div class="project-figure-frame">
+      <img alt="SEEKER 프로젝트 대표 이미지" loading="lazy" src="../assets/img/project/seeker_system.png"/>
+    </div>
+  </figure>
+  <div class="project-content-wide">
+    <section class="project-text-block">
+      <h3>Introduce</h3>
+      <ul class="project-bullets-wide">
+        <li>드론/CCTV 등 실시간 군영상에 대해 고속 현상황분석 및 요약, 연관 과거 상황 분석 기술</li>
+        <li>검색하고자 하는 특정객체/연계배경/유사 연계상황에 대한 Multi-modal VLM 기반 고속 동영상 검색 기술</li>
+      </ul>
+    </section>
+    <section class="project-text-block">
+      <h3>Objective</h3>
+      <ul class="project-bullets-wide">
+        <li>VLM 기반 Short/Long video 상황 분석 및 요약 기술 개발</li>
+        <li>Key frame 추출 및 VLM Tokenizing 기술</li>
+        <li>악천후/저조도/카메라 흔들림에 대한 영상 전처리 기술 개발</li>
+        <li>Text/Image-to-Video 동영상 생성 기법 기반 VLM 학습 영상 생성 기술 개발 </li>
+        <li>EO-to-IR 영상 변환 및 데이터 증강 기술</li>
+        <li>Human-In-The-Loop 기반 자동 캡션 라벨링 기술 개발</li>
+      </ul>
+    </section>
+  </div>
+</article>
+
+
+<article class="project-wide-card">
+  <header class="project-wide-head">
+    <p class="project-number-wide">PROJECT 02</p>
     <h1 class="project-title-wide">위변조 공격에 강인한 물리적 복제 불가능 PUF·블록체인 융합보안 기술개발</h1>
   </header>
   <figure class="project-figure-wide">
     <div class="project-figure-frame">
-      <img alt="차량 내 운전자 복합감정인지 온디바이스 AI 프로젝트 대표 이미지" loading="lazy" src="../assets/img/project/puf_all.jpg"/>
+      <img alt="PUF 프로젝트 대표 이미지" loading="lazy" src="../assets/img/project/puf_all.jpg"/>
     </div>
   </figure>
   <div class="project-content-wide">
