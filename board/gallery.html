@@ -27,6 +27,26 @@
   object-fit: contain !important;
   object-position: center;
 }
+
+/* Keep the new portrait photo focused on the group in the existing wide frame.
+   The original image is retained for the click-to-enlarge view. */
+.daily-life-grid--latest {
+  margin-bottom: 44px;
+}
+.daily-life-grid--wide-photos .daily-life-photo--group-crop img {
+  object-fit: cover !important;
+  object-position: 50% 62%;
+}
+@media (max-width: 940px) {
+  .daily-life-grid--latest .daily-life-slot-empty:last-child {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .daily-life-grid--latest .daily-life-slot-empty {
+    display: none;
+  }
+}
 </style>
 </head>
 <body>
@@ -87,6 +107,20 @@
       예: src="../assets/img/gallery/2026-05-21-sejong-party.jpg"
       3) 날짜와 설명은 daily-life-date / daily-life-caption 텍스트만 수정하면 됩니다.
     -->
+
+<div class="daily-life-grid daily-life-grid--wide-photos daily-life-grid--latest">
+<figure class="daily-life-card">
+<button aria-label="Welcome Dinner for New Members (Nov. 2, 2026) 사진 크게 보기" class="image-pop-trigger daily-life-photo daily-life-photo--group-crop" type="button">
+<img alt="Welcome Dinner for New Members (Nov. 2, 2026)" loading="lazy" src="../assets/img/gallery/lab_dinner_20261102.jpg"/>
+</button>
+<figcaption>
+<span class="daily-life-caption">Welcome Dinner for New Members (Nov. 2, 2026)</span>
+</figcaption>
+</figure>
+<!-- Reserved photo slots: leave blank until the next gallery update. -->
+<div class="daily-life-slot-empty" aria-hidden="true"></div>
+<div class="daily-life-slot-empty" aria-hidden="true"></div>
+</div>
 
 <div class="daily-life-grid daily-life-grid--wide-photos">
 <figure class="daily-life-card">
